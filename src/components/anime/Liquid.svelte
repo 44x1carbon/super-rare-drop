@@ -53,7 +53,7 @@
       _a({
         targets: "#liquid",
         translateY: 520,
-        duration: 5000,
+        duration: 3000,
         easing: "easeOutQuad",
       }),
       offset(800, async () => {
@@ -65,7 +65,7 @@
           easing: "linear",
         });
       }),
-      offset(1300, async () => {
+      offset(500, async () => {
         off("egg");
         on("egg-replace");
       }),
@@ -80,19 +80,19 @@
       _a({
         targets: "#egg-l",
         rotate: -30,
-        duration: 2000,
+        duration: 500,
       }),
       _a({
         targets: "#egg-r",
         rotate: 30,
-        duration: 2000,
+        duration: 500,
       }),
-      offset(1000, async () => {
+      offset(0, async () => {
         on("chara");
         await _a({
           targets: "#chara",
           opacity: 1,
-          duration: 2000,
+          duration: 1000,
         });
       }),
     ]);
