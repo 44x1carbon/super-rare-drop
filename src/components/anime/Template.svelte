@@ -71,7 +71,9 @@
   });
 </script>
 
-<div class="fixed top-0 left-0 p-4 bg-black/10 h-screen w-screen z-50">
+<div
+  class="fixed top-0 left-0 p-4 bg-black/10 h-[100svh] max-h-[571px] w-screen z-50"
+>
   <div class="h-[100%]">
     <div
       class="h-[90%] w-full bg-white relative left-1/2 transform -translate-x-1/2"
