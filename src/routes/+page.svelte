@@ -1,5 +1,6 @@
 <div class="flex-1 flex flex-col gap-4 pt-[50%]">
   <img src="./logo.png" alt="" />
+  <div>v1.0.0</div>
   <div class="p-2 flex flex-col gap-4">
     <a
       href="/result"
