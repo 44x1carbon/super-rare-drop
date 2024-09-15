@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import type { EggRank } from "../app";
+import { ANIME_DATA } from '../data/anime';
 import { CHARA_DATA } from "../data/chara";
 
 type Chara = {
@@ -64,6 +65,28 @@ export const choiceEggRank = (rankList: EggRank[] = ["g", "s", "b", "w"]) => {
 }
 
 export const choiceAnimeNum = () => {
-    const animeSize = 6;
-    return Math.floor(Math.random() * animeSize) + 1;
+    const { r, g } = Object.entries(ANIME_DATA).reduce((p, c) => {
+        // @ts-ignore
+        if (p[c[1].startRank] === undefined) {
+            // @ts-ignore
+            p[c[1].startRank] = [];
+        }
+
+        // @ts-ignore
+        p[c[1].startRank].push({
+            animeNum: parseInt(c[0]),
+            startRank: c[1].startRank,
+            loading: c[1].loading
+        });
+
+        return p;
+    }, {} as Record<"r" | "g", {
+        animeNum: number,
+        startRank: string
+        loading: number
+    }[]>);
+
+    const target = 0.05 <= Math.random() ? r : g;
+    const index = Math.floor(Math.random() * target.length)
+    return target[index].animeNum;
 }
