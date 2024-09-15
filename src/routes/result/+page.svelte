@@ -11,7 +11,7 @@
   async function roll10Gacha() {
     eggs = [];
 
-    let isAllLR = 0.05 <= Math.random();
+    let isAllLR = 0.05 >= Math.random();
 
     for (let i = 0; i < 10; i++) {
       await tick();
