@@ -1,0 +1,32 @@
+{
+	"name": "super-rare-drop",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@types/animejs": "^3.1.12",
+		"@types/lodash": "^4.17.7",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.45",
+		"svelte": "^4.2.7",
+		"svelte-check": "^4.0.0",
+		"tailwindcss": "^3.4.11",
+		"typescript": "^5.0.0",
+		"vite": "^5.0.3"
+	},
+	"type": "module",
+	"dependencies": {
+		"animejs": "^3.2.2",
+		"gsap": "file:gsap-bonus.tgz",
+		"lodash": "^4.17.21"
+	}
+}
